@@ -8,6 +8,13 @@
     //   Clima: mudar()
     //   Dificuldade: superar()
     //   Refeicao: servir()
+    // Relações:
+    // Personagem → Jornada = Associação
+    // Personagem → Dificuldade = Associação
+    // Personagem → Refeicao = Associação
+    // Jornada → Clima = Agregação 
+    // Dificuldade → Clima = Agregação 
+    // Refeicao → Personagem = Associação 
     // =====================================
 
     class Jornada {

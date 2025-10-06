@@ -9,6 +9,14 @@
     //   Shopping: receberDoacao()
     //   Brinquedo: getTipo()
     //   Crianca: receberBrinquedo()
+    // Relações:
+    // Heroi → LocalDeTreinamento = Associação
+    // Heroi → Missao = Associação
+    // Heroi → Brinquedo = Associação
+    // Heroi → Shopping = Associação
+    // Heroi → Crianca = Associação 
+    // Shopping → Brinquedo = Agregação 
+    // Crianca → Brinquedo = Associação 
     // =====================================
 
     class Missao {

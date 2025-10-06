@@ -8,6 +8,16 @@
     //   Atividade: executar()
     //   Comida: getDescricao()
     //   CorpoDagua: getTipo()
+    // Relações:
+    // Turista → Localidade = Associação
+    // Turista → Atividade  = Associação
+    // Turista → Comida = Associação
+    // Turista → CorpoDagua = Associação
+    // Localidade → Atividade = Agregação
+    // Localidade → Comida = Agregação
+    // Localidade → CorpoDagua = Agregação
+    // Atividade → Comida = Composição 
+    // Atividade → CorpoDagua = Composição 
     // =====================================
 
     abstract class Atividade {
