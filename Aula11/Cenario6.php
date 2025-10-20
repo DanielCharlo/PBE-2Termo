@@ -1,4 +1,5 @@
-<?php
+
+php
     // =====================================
     // Cenário 6 – Cinema
     // Classes: SistemaDeCinema, Cliente, Filme, Sessao, Ingresso, Sala
