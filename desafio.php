@@ -1,8 +1,4 @@
 <?php 
-
-    namespace DESAFIO;
-
-
     class Livro{
 
         private int $id;

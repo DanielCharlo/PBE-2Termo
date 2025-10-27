@@ -1,26 +1,28 @@
-<?php
-require_once "crud.php";
+<?php 
 
-class AlunoDAO {
-    private $alunos = [];
+    namespace Aula12;
 
-    public function criarAlunos($id, $nome, $curso) {
-        $this->alunos[$id] = new Aluno($id, $nome, $curso);
-    }
+    class AlunoDAO{
+        private $alunos=[];
 
-    public function lerAlunos() {
-        return $this->alunos;
-    }
+        public function criarAlunos(Aluno $aluno){
+            $this->alunos[$aluno->getId()]=$aluno;
+        }
 
-    public function atualizarAlunos($id, $novoNome, $novoCurso) {
-        if (isset($this->alunos[$id])) {
-            $this->alunos[$id]->setNome($novoNome);
-            $this->alunos[$id]->setCurso($novoCurso);
+        public function lerAlunos(){
+            return $this->alunos;
+        }
+
+        public function atualizarAlunos($id, $novoNome, $novoCurso){
+            if (isset($this->alunos[$id])) { // ✅ usa $this->alunos
+                $this->alunos[$id]->setNome($novoNome);
+                $this->alunos[$id]->setCurso($novoCurso);
+            }
+        }
+
+        public function excluirAlunos($id){
+            unset ($this->alunos[$id]);
         }
     }
 
-    public function excluirAlunos($id) {
-        unset($this->alunos[$id]);
-    }
-}
 ?>
