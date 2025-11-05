@@ -1,6 +1,8 @@
 <?php 
 
-class BebidaDao {
+require_once __DIR__ . '/Bebida.php';
+
+class BebidaDAO {
     private $bebidasArray = [];
     private $arquivoJson = 'bebidas.json';
 
@@ -38,7 +40,7 @@ class BebidaDao {
 
         file_put_contents(
             $this->arquivoJson,
-            json_encode($dados, JSON_PRETTY_PRINT)
+            json_encode($dados, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE)
         );
     }
 

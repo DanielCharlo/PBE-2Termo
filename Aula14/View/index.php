@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../controller/BebidaController.php';
+require_once __DIR__ . '/../Controller/bebidaController.php';
 
 $controller = new BebidaController();
 
@@ -28,7 +28,7 @@ $lista = $controller->ler();
 <br>
 <hr>
     <form method="POST">
-    <input type="hidden" name="acao" value="criar">
+    <input type="hidden" name="acao" value="salvar">
     <input type="text" name="nome" placeholder="Nome da bebida:" required>
     <select name="categoria" required>
         <option value="">Selecione a categoria</option>
@@ -45,6 +45,37 @@ $lista = $controller->ler();
     <input type="number" name="qtde" placeholder="Quantidade em estoque:" required>
     <button type="submit">Cadastrar</button>
     </form>
+
+    <h2>Bebidas cadastradas</h2>
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Nome</th>
+        <th>Categoria</th>
+        <th>Volume</th>
+        <th>Valor (R$)</th>
+        <th>Quantidade</th>
+        <th>Ações</th>
+    </tr>
+
+    <?php foreach ($lista as $bebida): ?>
+        <tr>
+            <td><?= $bebida->getNome(); ?></td>
+            <td><?= $bebida->getCategoria(); ?></td>
+            <td><?= $bebida->getVolume(); ?></td>
+            <td><?= $bebida->getValor(); ?></td>
+            <td><?= $bebida->getQtde(); ?></td>
+
+            <td>
+                <form method="POST" style="display:inline;">
+                    <input type="hidden" name="acao" value="deletar">
+                    <input type="hidden" name="nome" value="<?= $bebida->getNome(); ?>">
+                    <button type="submit">Excluir</button>
+                </form>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
 
 </body>
 </html>

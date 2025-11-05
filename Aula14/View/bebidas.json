@@ -1,0 +1,9 @@
+{
+    "Pepsi": {
+        "nome": "Pepsi",
+        "categoria": "Refrigerante",
+        "volume": "250ml",
+        "valor": "3",
+        "qtde": "5"
+    }
+}
