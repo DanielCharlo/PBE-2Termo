@@ -1,31 +1,31 @@
 <?php
-require_once __DIR__ . '/../Model/BebidaDAO.php';
-require_once __DIR__ . '/../Model/Bebida.php';
+require_once __DIR__ . '/../Model/LivroDAO.php';
+require_once __DIR__ . '/../Model/Livro.php';
 
-class BebidaController {
+class LivroController {
     private $dao;
 
     // Construtor: cria o objeto DAO (responsável por salvar/carregar)
     public function __construct() {
-        $this->dao = new BebidaDAO();
+        $this->dao = new LivroDAO();
     }
 
     // Lista todas as bebidas
-    public function criar($nome, $categoria, $volume, $valor, $qtde) {
+    public function criar($titulo, $autor, $genero, $anopublicacao, $qtde) {
 
         // // Gera ID automaticamente com base no timestamp (exemplo simples)
         // $id = time(); // Função caso o objeto tenha um atributo de ID
 
-        $bebida = new Bebida( $nome, $categoria, $volume, $valor, $qtde);
-        $this->dao->criarBebida($bebida);
+        $livro = new Livro( $titulo, $autor, $genero, $anopublicacao, $qtde);
+        $this->dao->criarLivro($livro);
     } 
     
     public function ler() {
-        return $this->dao->lerBebidas();
+        return $this->dao->lerLivros();
     }
   
 public function atualizar($nomeOriginal, $novoNome, $categoria, $volume, $valor, $qtde) {
-    $this->dao->atualizarBebida($nomeOriginal, $novoNome, $categoria, $volume, $valor, $qtde);
+    $this->dao->atualizarLivros($nomeOriginal, $novoNome, $categoria, $volume, $valor, $qtde);
 }
 
 public function buscarPorNome($nome) {
