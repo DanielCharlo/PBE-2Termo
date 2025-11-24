@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+
+.Container h1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Cadastrar {
+    background: #181818;
+    padding: 25px;
+    border-radius: 20px;
+    width: 500px;
+    height: 300px;
+    margin: 20px auto; 
+    
+}
+
+.Cadastrar h2 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.Cadastrar input {
+    border-radius: 10px;
+    background: rgb(240, 240, 240);
+    text-decoration: black;
+    width: 200px;
+    height: 22px;
+    border: 0cap;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+}
+
+.Cadastrar input::placeholder {
+    color: rgb(153, 151, 151);
+}
+
+.Cadastrar button {
+    width: 95%;
+    padding: 12px;
+    background: purple;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.Tabela {
+    background: #181818;
+    padding: 25px;
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+    border: none;
+}
+
+.Tabela th, td{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    white-space: nowrap;
+}
+
+.Tabela h2{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.Tabela button {
+    width: 90%;
+    height: 30px;
+    padding: 12px;
+    background: purple;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 5px;
+    margin-left: 4px;
+}
+
+/* Título = nth-child é um seletor, numero 1,2,3 indica as colunas*/
+.Tabela th:nth-child(1),
+.Tabela td:nth-child(1) {
+    width: 250px; 
+}
+
+/* Autor */
+.Tabela th:nth-child(2),
+.Tabela td:nth-child(2) {
+    width: 180px;
+}
+
+/* Gênero */
+.Tabela th:nth-child(3),
+.Tabela td:nth-child(3) {
+    width: 150px;
+}
+
+.Tabela table {
+    margin: 0 auto;
+}
+
+.Atualizar {
+     background: #181818;
+    padding: 25px;
+    border-radius: 20px;
+    width: 500px;
+    height: 300px;
+    margin: 20px auto; 
+}
+
+.Atualizar h2 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.Atualizar input {
+    border-radius: 10px;
+    background: rgb(240, 240, 240);
+    text-decoration: black;
+    width: 200px;
+    height: 22px;
+    border: 0cap;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+}
+
+.Atualizar input::placeholder {
+    color: rgb(153, 151, 151);
+}
+
+.Atualizar button {
+    width: 95%;
+    padding: 12px;
+    background: purple;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
