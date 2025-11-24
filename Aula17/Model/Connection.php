@@ -9,7 +9,7 @@ class Connection {
                 $host = 'localhost';
                 $dbname = 'BibliotecaEscolar';
                 $user = 'root';
-                $pass = '1234';
+                $pass = 'Charlo2025@';
 
                 // Conecta no MySQL
                 self::$instance = new PDO(
